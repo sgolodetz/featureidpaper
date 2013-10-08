@@ -171,7 +171,7 @@ tabsize=4
 \end{abstract}
 
 \begin{IEEEkeywords}
-abdominal CT, feature identification, image partition forests
+abdominal CT scans, feature identification, image partition forests
 \end{IEEEkeywords}
 
 \IEEEpeerreviewmaketitle
@@ -180,7 +180,50 @@ abdominal CT, feature identification, image partition forests
 \section{Introduction}
 %#####################
 
+\begin{itemize}
+\item Identifying features in medical scans is important - useful for 3D visualisation, volume estimation, landmark-based registration, ...
+\item As a result, lots of work done on identifying individual features (references).
+\item However, only a limited number of attempts to do multi-feature identification within a single framework - individual features are already hard, techniques don't necessarily transfer well from one feature to another. Survey the small number of approaches that have been tried.
+\item We believe that it makes sense to try to identify lots of features together - identifying some features helps you identify others, etc. Bone structures in particular are especially helpful landmarks.
+\item This paper therefore presents our approach to multi-feature identification in 3D abdominal CT scans based on image partition forests. This builds on our earlier work on automatically identifying the ribs and spine in 2D scans \cite{gvccimi08,gvcispa09}.
+\item TODO
+\end{itemize}
+
+TODO
+
 \IEEEpubidadjcol
+
+\section{Image Partition Forests}
+
+TODO
+
+\section{2D Rib and Spine Identification}
+
+TODO: \cite{gvccimi08,gvcispa09}
+
+\subsection{Limitations}
+
+TODO
+
+\section{A 3D Multi-Feature Identifier}
+
+TODO: \cite{golodetz11}
+
+\section{Experiments}
+
+TODO
+
+\section{Discussion}
+
+TODO
+
+\section{Conclusions}
+
+TODO
+
+\section{Acknowledgements}
+
+TODO
 
 \clearpage
 
