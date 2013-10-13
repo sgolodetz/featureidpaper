@@ -167,7 +167,7 @@ tabsize=4
 \maketitle
 
 \begin{abstract}
-\noindent The automatic identification of features (e.g.~bone structures and organs) in medical images is an important precursor to a number of tasks, including 3D visualisation, volume estimation and landmark-based registration. However, automatic techniques in the literature have tended to focus on the identification of individual features, with relatively few attempts being made to identify multiple features within a single framework due to the challenges involved in identifying even individual features automatically and the fact that techniques often need to be quite specialised for each feature type. Despite this, we believe that it can often make sense to identify multiple features together, since correctly identifying some features can be of great help when identifying others. Bone structures in particular are especially helpful landmarks due to their rigidity, and our earlier work on ribs and spine identification showed that bone structures could be automatically identified in 2D abdominal CT scans using approaches based on \emph{image partition forests}. In this paper, we extend this work to show that similar techniques can be used to identify bone structures in 3D, and present preliminary results showing that the identified structures can be used to guide the identification of other features such as the spinal canal, aorta and kidneys. We also show that our overall approach can in principle be used to support the identification of other features such as the liver, although significant further work is needed to make our liver identification approach sufficiently robust.
+\noindent The automatic identification of features (e.g.~bone structures and organs) in medical images is an important precursor to a number of tasks, including 3D visualisation, volume estimation and landmark-based registration. However, automatic techniques in the literature have tended to focus on the identification of individual features, with relatively few attempts being made to identify multiple features within a single framework due to the challenges involved in identifying even individual features automatically and the fact that techniques often need to be quite specialised for each feature type. Despite this, we believe that it can often make sense to identify multiple features together, since correctly identifying some features can be of great help when identifying others. Bone structures in particular are especially helpful landmarks due to their rigidity, and our earlier work on ribs and spine identification showed that bone structures could be automatically identified in 2D abdominal CT scans using approaches based on \emph{image partition forests} (IPFs). In this paper, we extend this work to show that similar techniques can be used to identify bone structures in 3D, and present preliminary results showing that the identified structures can be used to guide the identification of other features such as the spinal canal, aorta and kidneys.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -180,50 +180,71 @@ abdominal CT scans, feature identification, image partition forests
 \section{Introduction}
 %#####################
 
-\begin{itemize}
-\item Identifying features in medical scans is important - useful for 3D visualisation, volume estimation, landmark-based registration, ...
-\item As a result, lots of work done on identifying individual features (references).
-\item However, only a limited number of attempts to do multi-feature identification within a single framework - individual features are already hard, techniques don't necessarily transfer well from one feature to another. Survey the small number of approaches that have been tried.
-\item We believe that it makes sense to try to identify lots of features together - identifying some features helps you identify others, etc. Bone structures in particular are especially helpful landmarks.
-\item This paper therefore presents our approach to multi-feature identification in 3D abdominal CT scans based on image partition forests. This builds on our earlier work on automatically identifying the ribs and spine in 2D scans \cite{gvccimi08,gvcispa09}.
-\item TODO
-\end{itemize}
+TODO
+
+\textbf{The organisation of this paper is as follows:} in \S\ref{sec:background}, we briefly revisit the image partition forest (IPF) data structure and our original work on 2D rib and spine identification; in \S\ref{sec:bone3d}, we present our approach to identifying bone structures in 3D abdominal CT scans; in \S\ref{sec:multi3d}, we show how the identified bone structures can guide identification of the spinal canal, aorta and kidneys; in \S\ref{sec:experiments}, we TODO; and in \S\ref{sec:discussion}, we evaluate the results of our experiments and examine ways in which our work could be taken forwards.
+
+%#####################
+\section{Background}
+\label{sec:background}
+%#####################
+
+\subsection{Image Partition Forests}
 
 TODO
 
-\IEEEpubidadjcol
+%---
+\stufigex{width=.85\linewidth}{ipfs-ctconcept.png}{An example partition forest for an abdominal CT scan. (TODO: Create a version of this with multiple features identified.)}{fig:ipfs-ctconcept}{htb}
+%---
 
-\section{Image Partition Forests}
-
-TODO
-
-\section{2D Rib and Spine Identification}
+\subsection{2D Rib and Spine Identification}
 
 TODO: \cite{gvccimi08,gvcispa09}
 
-\subsection{Limitations}
+TODO: Limitations
+
+%#########################################
+\section{3D Bone Structure Identification}
+\label{sec:bone3d}
+%#########################################
+
+\IEEEpubidadjcol
 
 TODO
 
-\section{A 3D Multi-Feature Identifier}
+%########################################
+\section{3D Multi-Feature Identification}
+\label{sec:multi3d}
+%########################################
 
 TODO: \cite{golodetz11}
 
+%######################
 \section{Experiments}
+\label{sec:experiments}
+%######################
 
 TODO
 
+%#####################
 \section{Discussion}
+\label{sec:discussion}
+%#####################
 
 TODO
 
-\section{Conclusions}
+%#####################################
+\section{Conclusions and Further Work}
+\label{sec:conclusions}
+%#####################################
 
 TODO
 
+%#########################
 \section{Acknowledgements}
+%#########################
 
-TODO
+We are profoundly grateful to Dr.\ Zoe Traill of the Churchill Hospital, Oxford, both for providing us with abdominal CT scans and for giving up her time to help us interpret them. We also gratefully acknowledge the support of the UK Engineering and Physical Sciences Research Council (EPSRC) in funding Stuart Golodetz's doctoral work via a Doctoral Training Account (DTA).
 
 \clearpage
 
